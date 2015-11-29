@@ -78,7 +78,7 @@ public class FusableBooks extends Books implements Fusable {
 		case PUBYEAR:
 			return getYear()!=null && !getYear().isEmpty();
 		case RATING:
-			return getRating() != 0;
+			return getRating() != 0.0;
 		default:
 			return false;
 		}
