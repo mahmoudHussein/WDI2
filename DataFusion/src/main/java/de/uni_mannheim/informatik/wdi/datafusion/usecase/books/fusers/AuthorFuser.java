@@ -14,7 +14,7 @@ import de.uni_mannheim.informatik.wdi.usecase.books.Authors;
 
 public class AuthorFuser extends AttributeValueFuser<List<Authors>, FusableBooks> {
 
-	public AuthorFuser(ConflictResolutionFunction<List<Authors>, FusableBooks> conflictResolution) {
+	public AuthorFuser() {
 		super(new Union<Authors, FusableBooks>());
 	}
 

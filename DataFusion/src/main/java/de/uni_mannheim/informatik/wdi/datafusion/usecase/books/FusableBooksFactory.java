@@ -42,7 +42,11 @@ public class FusableBooksFactory extends MatchableFactory<FusableBooks> implemen
 		book.setGenre(getValueFromChildElement(node, "Genre"));
 		book.setPages(getValueFromChildElement(node, "Pages"));
 		book.setPubCountry(getValueFromChildElement(node, "Publication_Country"));
-		book.setRating(getValueFromChildElement(node, "Rating"));
+		
+		String rating = getValueFromChildElement(node, "Rating");
+		double ratingVal = Double.parseDouble(rating);
+		book.setRating(ratingVal);
+		
 		book.setYear(getValueFromChildElement(node, "Publication_Date"));
 		
 		// load the list of authors

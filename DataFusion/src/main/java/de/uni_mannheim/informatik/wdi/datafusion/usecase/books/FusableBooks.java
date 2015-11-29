@@ -78,7 +78,7 @@ public class FusableBooks extends Books implements Fusable {
 		case PUBYEAR:
 			return getYear()!=null && !getYear().isEmpty();
 		case RATING:
-			return getRating()!=null && !getRating().isEmpty();
+			return getRating() != 0;
 		default:
 			return false;
 		}
@@ -86,7 +86,7 @@ public class FusableBooks extends Books implements Fusable {
 	
 	@Override
 	public String toString() {
-		return String.format("[Book: %s / %s / %s]", getISBN(), getBookName(), getPublisher(), getGenre(), getPages(), getPubCounrty(), getYear(), getRating().toString());
+		return String.format("[Book: %s / %s / %s]", getISBN(), getBookName(), getPublisher(), getGenre(), getPages(), getPubCounrty(), getYear().toString());
 	}
 
 }
