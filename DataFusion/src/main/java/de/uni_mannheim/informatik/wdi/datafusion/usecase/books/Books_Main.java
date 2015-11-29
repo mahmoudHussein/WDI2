@@ -57,10 +57,10 @@ public class Books_Main {
 		ds3.setScore(1.0);
 		ds4.setScore(2.0);
 		
-		ds1.setDate(DateTime.parse("2012-01-01"));
-		ds2.setDate(DateTime.parse("2010-01-01"));
-		ds3.setDate(DateTime.parse("2008-01-01"));
-		
+		ds1.setDate(DateTime.parse("2015-11-12"));
+		ds2.setDate(DateTime.parse("2015-11-12"));
+		ds3.setDate(DateTime.parse("2015-10-15"));
+		ds4.setDate(DateTime.parse("2014-09-01"));
 		// print dataset density
 		System.out.println("AuthorTargetSchemaB.xml");
 		ds1.printDataSetDensityReport();
@@ -78,10 +78,10 @@ public class Books_Main {
 		correspondences.loadCorrespondences(new File("usecase/books/correspondences/GoodReads_2_DbpediaBooks_Correspondences.csv"), ds3, ds2);
 		
 		// write group size distribution
-		correspondences.writeGroupSizeDistribution(new File("usecase/movie/output/group_size_distribution.csv"));
+		correspondences.writeGroupSizeDistribution(new File("usecase/Books/output/group_size_distribution.csv"));
 		
 		// define the fusion strategy
-		DataFusionStrategy<FusableMovie> strategy = new DataFusionStrategy<>(new FusableBooksFactory());
+		DataFusionStrategy<FusableBooks> strategy = new DataFusionStrategy<>(new FusableBooksFactory());
 		// add attribute fusers
 		// Note: The attribute name is only used for printing the reports
 		strategy.addAttributeFuser("Title", new TitleFuser(), new TitleEvaluationRule());
@@ -104,8 +104,8 @@ public class Books_Main {
 		// load the gold standard
 		DataSet<FusableMovie> gs = new FusableDataSet<>();
 		gs.loadFromXML(
-				new File("usecase/movie/goldstandard/fused.xml"),
-				new FusableMovieFactory(), "/movies/movie");
+				new File("usecase/Books/goldstandard/fused.xml"),
+				new FusableBooksFactory(), "/Books/Books");
 		
 		// evaluate
 		DataFusionEvaluator<FusableMovie> evaluator = new DataFusionEvaluator<>(strategy);
