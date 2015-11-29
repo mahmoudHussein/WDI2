@@ -118,19 +118,19 @@ public class Books_Main {
 		engine.printClusterConsistencyReport(correspondences);
 		
 		// run the fusion
-		FusableDataSet<FusableMovie> fusedDataSet = engine.run(correspondences);
+		FusableDataSet<FusableBooks> fusedDataSet = engine.run(correspondences);
 		
 		// write the result
-		fusedDataSet.writeXML(new File("usecase/movie/output/fused.xml"), new MovieXMLFormatter());
+		fusedDataSet.writeXML(new File("usecase/book/output/fused.xml"), new BookXMLFormatter());
 		
 		// load the gold standard
-		DataSet<FusableMovie> gs = new FusableDataSet<>();
+		DataSet<FusableBooks> gs = new FusableDataSet<>();
 		gs.loadFromXML(
 				new File("usecase/Books/goldstandard/fused.xml"),
 				new FusableBooksFactory(), "/Books/Books");
 		
 		// evaluate
-		DataFusionEvaluator<FusableMovie> evaluator = new DataFusionEvaluator<>(strategy);
+		DataFusionEvaluator<FusableBooks> evaluator = new DataFusionEvaluator<>(strategy);
 		evaluator.setVerbose(true);
 		double accuracy = evaluator.evaluate(fusedDataSet, gs);
 		
