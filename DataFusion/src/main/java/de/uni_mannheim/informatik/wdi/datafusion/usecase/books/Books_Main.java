@@ -18,6 +18,24 @@ import de.uni_mannheim.informatik.wdi.datafusion.DataFusionEngine;
 import de.uni_mannheim.informatik.wdi.datafusion.DataFusionStrategy;
 import de.uni_mannheim.informatik.wdi.datafusion.FusableDataSet;
 import de.uni_mannheim.informatik.wdi.datafusion.evaluation.DataFusionEvaluator;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.AuthorsEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.BookTitleEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.GenreEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.ISBNEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.PagesEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.PubCountryEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.PubYearEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.PublisherEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.evaluation.RatingEvaluationRule;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.AuthorFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.BookTitleFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.GenreFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.ISBNFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PagesFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PubCountryFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PubDateFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PublisherFuser;
+import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.RatingFuser;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.FusableMovie;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.ActorsEvaluationRule;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.DateEvaluationRule;
@@ -84,13 +102,17 @@ public class Books_Main {
 		DataFusionStrategy<FusableBooks> strategy = new DataFusionStrategy<>(new FusableBooksFactory());
 		// add attribute fusers
 		// Note: The attribute name is only used for printing the reports
-		strategy.addAttributeFuser("Title", new TitleFuser(), new TitleEvaluationRule());
-		strategy.addAttributeFuser("Director", new DirectorFuser(), new DirectorEvaluationRule());
-		strategy.addAttributeFuser("Date", new DateFuser(), new DateEvaluationRule());
-		strategy.addAttributeFuser("Actors", new ActorsFuser(), new ActorsEvaluationRule());
-		
+		strategy.addAttributeFuser("ISBN", new ISBNFuser(), new ISBNEvaluationRule());
+		strategy.addAttributeFuser("Book_Name", new BookTitleFuser(), new BookTitleEvaluationRule());
+		strategy.addAttributeFuser("Authors", new AuthorFuser() , new AuthorsEvaluationRule());
+		strategy.addAttributeFuser("Publisher", new PublisherFuser(), new PublisherEvaluationRule());
+		strategy.addAttributeFuser("Genre", new GenreFuser(), new GenreEvaluationRule());
+		strategy.addAttributeFuser("Pages", new PagesFuser(), new PagesEvaluationRule());
+		strategy.addAttributeFuser("Publication_Country", new PubCountryFuser(), new PubCountryEvaluationRule());
+		strategy.addAttributeFuser("Publication_Date", new PubDateFuser(), new PubYearEvaluationRule());
+		strategy.addAttributeFuser("Rating", new RatingFuser(), new RatingEvaluationRule());
 		// create the fusion engine
-		DataFusionEngine<FusableMovie> engine = new DataFusionEngine<>(strategy);
+		DataFusionEngine<FusableBooks> engine = new DataFusionEngine<>(strategy);
 		
 		// calculate cluster consistency
 		engine.printClusterConsistencyReport(correspondences);
