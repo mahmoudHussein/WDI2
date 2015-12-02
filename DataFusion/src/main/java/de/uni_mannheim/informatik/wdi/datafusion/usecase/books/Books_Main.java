@@ -111,9 +111,9 @@ public class Books_Main {
 		strategy.addAttributeFuser("Book_Name", new BookTitleFuser(), new BookTitleEvaluationRule());
 		strategy.addAttributeFuser("Authors", new AuthorFuser() , new AuthorsEvaluationRule());
 		strategy.addAttributeFuser("Publisher", new PublisherFuser(), new PublisherEvaluationRule());
-//		strategy.addAttributeFuser("Genre", new GenreFuser(), new GenreEvaluationRule());
-//		strategy.addAttributeFuser("Pages", new PagesFuser(), new PagesEvaluationRule());
-//		strategy.addAttributeFuser("Publication_Country", new PubCountryFuser(), new PubCountryEvaluationRule());
+		strategy.addAttributeFuser("Genre", new GenreFuser(), new GenreEvaluationRule());
+		strategy.addAttributeFuser("Pages", new PagesFuser(), new PagesEvaluationRule());
+		strategy.addAttributeFuser("Publication_Country", new PubCountryFuser(), new PubCountryEvaluationRule());
 		strategy.addAttributeFuser("Publication_Date", new PubDateFuser(), new PubYearEvaluationRule());
 		strategy.addAttributeFuser("Rating", new RatingFuser(), new RatingEvaluationRule());
 		// create the fusion engine

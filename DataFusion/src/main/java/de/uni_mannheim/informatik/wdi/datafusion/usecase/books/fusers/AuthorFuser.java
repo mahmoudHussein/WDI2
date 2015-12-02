@@ -5,11 +5,8 @@ import java.util.List;
 import de.uni_mannheim.informatik.wdi.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.wdi.datafusion.FusedValue;
 import de.uni_mannheim.informatik.wdi.datafusion.RecordGroup;
-import de.uni_mannheim.informatik.wdi.datafusion.conflictresolution.ConflictResolutionFunction;
 import de.uni_mannheim.informatik.wdi.datafusion.conflictresolution.list.Union;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.FusableBooks;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.Actor;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.FusableMovie;
 import de.uni_mannheim.informatik.wdi.usecase.books.Authors;
 
 public class AuthorFuser extends AttributeValueFuser<List<Authors>, FusableBooks> {
