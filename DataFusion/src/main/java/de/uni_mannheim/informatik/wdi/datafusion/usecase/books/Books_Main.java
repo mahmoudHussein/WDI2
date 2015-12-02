@@ -53,7 +53,7 @@ public class Books_Main {
 		FusableDataSet<FusableBooks> ds1 = new FusableDataSet<>();
 		FusableDataSet<FusableBooks> ds2 = new FusableDataSet<>();
 		FusableDataSet<FusableBooks> ds3 = new FusableDataSet<>();
-		FusableDataSet<FusableBooks> ds4 = new FusableDataSet<>();
+//		FusableDataSet<FusableBooks> ds4 = new FusableDataSet<>();
 		ds1.loadFromXML(
 				new File("usecase/books/input/AuthorTargetSchemaB.xml"),
 				new FusableBooksFactory(), "/Books/Book");
@@ -126,13 +126,13 @@ public class Books_Main {
 		FusableDataSet<FusableBooks> fusedDataSet = engine.run(correspondences);
 		
 		// write the result
-		fusedDataSet.writeXML(new File("usecase/book/output/fused.xml"), new BookXMLFormatter());
+		fusedDataSet.writeXML(new File("usecase/books/output/fused.xml"), new BookXMLFormatter());
 		
 		// load the gold standard
 		DataSet<FusableBooks> gs = new FusableDataSet<>();
 		gs.loadFromXML(
-				new File("usecase/Books/goldstandard/fused.xml"),
-				new FusableBooksFactory(), "/Books/Books");
+				new File("usecase/books/goldstandard/GS_Fusion.xml"),
+				new FusableBooksFactory(), "/Books/Book");
 		
 		// evaluate
 		DataFusionEvaluator<FusableBooks> evaluator = new DataFusionEvaluator<>(strategy);

@@ -23,7 +23,7 @@ public class BookXMLFormatter extends XMLFormatter<FusableBooks> {
 		
 		Book.appendChild(createTextElementWithProvenance("ISBN", record.getISBN(), record.getMergedAttributeProvenance(FusableBooks.ISBN),doc));
 		Book.appendChild(createTextElementWithProvenance("Book_Name", record.getBookName(), record.getMergedAttributeProvenance(FusableBooks.BOOK_NAME),doc));
-		Book.appendChild(createTextElementWithProvenance("Publication_Date", record.getYear().toString(), record.getMergedAttributeProvenance(FusableBooks.PUBYEAR),doc));
+		Book.appendChild(createTextElementWithProvenance("Publication_Date", record.getYear(), record.getMergedAttributeProvenance(FusableBooks.PUBYEAR),doc));
 		Book.appendChild(createTextElementWithProvenance("Publisher", record.getPublisher(), record.getMergedAttributeProvenance(FusableBooks.PUBLISHER),doc));
 		Book.appendChild(createTextElementWithProvenance("Publication_Country", record.getPubCounrty(), record.getMergedAttributeProvenance(FusableBooks.PUBCOUNTRY),doc));
 		Book.appendChild(createTextElementWithProvenance("Pages", record.getPages(), record.getMergedAttributeProvenance(FusableBooks.PAGES),doc));

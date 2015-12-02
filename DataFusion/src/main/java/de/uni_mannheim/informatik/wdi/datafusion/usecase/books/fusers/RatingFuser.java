@@ -20,15 +20,16 @@ public class RatingFuser extends AttributeValueFuser<Double, FusableBooks>{
 		FusedValue<Double, FusableBooks> fused = getFusedValue(group);
 		
 		// set the value for the fused record
+		if(fused.getValue() != null){
 		fusedRecord.setRating(fused.getValue());
-		
+		}
 		// add provenance info
-		fusedRecord.setAttributeProvenance(FusableBooks.PUBYEAR, fused.getOriginalIds());
+		fusedRecord.setAttributeProvenance(FusableBooks.RATING, fused.getOriginalIds());
 	}
 
 	@Override
 	public boolean hasValue(FusableBooks record) {
-		return record.hasValue(FusableBooks.PUBYEAR);
+		return record.hasValue(FusableBooks.RATING);
 	}
 	
 	@Override
