@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Books xsi:noNamespaceSchemaLocation="file:///D:/STUDY_GERMANY/3%20SEMESTER/Web%20data%20integration/PROJECT%20WDI/TargetSchemaBooks.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Book>
+		<Id>GoodReadsBooks_14751</Id>
+		<ISBN>067088300X</ISBN>
+		<Book_Name>The Girls' Guide to Hunting and Fishing</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Melissa Bank</Name>
+			</Author>
+		</Authors>
+		<Publisher>Viking Books/Penguin Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1999</Publication_Date>
+		<Rating>3.206632653</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14645</Id>
+		<ISBN>067102440X</ISBN>
+		<Book_Name>Resident Evil: Caliban Cove</Book_Name>
+		<Authors>
+			<Author>
+				<Name>S. D. Perry</Name>
+			</Author>
+		</Authors>
+		<Publisher>Pocket Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1998</Publication_Date>
+		<Genre>Horror fiction</Genre>
+		<Rating>4.065</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_8850</Id>
+		<ISBN>088038722X</ISBN>
+		<Book_Name>Darkness and Light (Dragonlance: Preludes, #1)</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Paul B. Thompson</Name>
+			</Author>
+		</Authors>
+		<Publisher>Wizards of the Coast</Publisher>
+		<Publication_Date>1989</Publication_Date>
+		<Pages>377</Pages>
+		<Rating>3.6</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_13760</Id>
+		<ISBN>067942573X</ISBN>
+		<Book_Name>Taltos: Lives of the Mayfair Witches</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Anne Rice</Name>
+			</Author>
+		</Authors>
+		<Publisher>Alfred A. Knopf</Publisher>
+		<Publication_Date>1994</Publication_Date>
+		<Pages>480</Pages>
+		<Genre>Horror fiction</Genre>
+		<Rating>3.77</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_12495</Id>
+		<ISBN>074320395X</ISBN>
+		<Book_Name>The Body Artist</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Don DeLillo</Name>
+			</Author>
+		</Authors>
+		<Publisher>Charles Scribner's Sons</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>2001</Publication_Date>
+		<Rating>3.2</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14768</Id>
+		<ISBN>067087311X</ISBN>
+		<Book_Name>Icy Sparks</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Gwyn Hyman Rubio</Name>
+			</Author>
+		</Authors>
+		<Publisher>Viking Books/Penguin Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1998</Publication_Date>
+		<Pages>320</Pages>
+		<Genre>Novel</Genre>
+		<Rating>3.66</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14824</Id>
+		<ISBN>067081976X</ISBN>
+		<Book_Name>Leaving Home: A Collection of Lake Wobegon Stories</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Garrison Keillor</Name>
+			</Author>
+		</Authors>
+		<Publisher>Viking Press/Penguin USA</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1987</Publication_Date>
+		<Rating>3.78</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14806</Id>
+		<ISBN>067084134X</ISBN>
+		<Book_Name>Ravelstein</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Saul Bellow</Name>
+			</Author>
+		</Authors>
+		<Publisher>Viking Press</Publisher>
+		<Publication_Date>2000</Publication_Date>
+		<Rating>3.59</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14030</Id>
+		<ISBN>067178577X</ISBN>
+		<Book_Name>Thin Air (Star Trek: New Earth, Book 5)</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Kristine Kathryn Rusch</Name>
+			</Author>
+		</Authors>
+		<Publisher>Pocket Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>2000</Publication_Date>
+		<Rating>3.7</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_13793</Id>
+		<ISBN>067940211X</ISBN>
+		<Book_Name>Primal Fear</Book_Name>
+		<Authors>
+			<Author>
+				<Name>William Diehl</Name>
+			</Author>
+		</Authors>
+		<Publisher>Random House Inc/Villard (imprint)</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1993</Publication_Date>
+		<Rating>4.17</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_13145</Id>
+		<ISBN>068815333X</ISBN>
+		<Book_Name>Prayers for Rain</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Dennis Lehane</Name>
+			</Author>
+		</Authors>
+		<Publisher>William Morrow and Company</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1999</Publication_Date>
+		<Pages>352</Pages>
+		<Genre>Crime fiction</Genre>
+		<Rating>4.07</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_7443</Id>
+		<ISBN>140004684X</ISBN>
+		<Book_Name>See No Evil: The True Story of a Ground Soldier in the CIA's War on Terrorism</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Robert Baer</Name>
+			</Author>
+		</Authors>
+		<Publisher>Three Rivers Press</Publisher>
+		<Publication_Date>2003</Publication_Date>
+		<Pages>320</Pages>
+		<Rating>3.92</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14608</Id>
+		<ISBN>067103930X</ISBN>
+		<Book_Name>Prime Evil (Buffy the Vampire Slayer)</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Diana G. Gallagher</Name>
+			</Author>
+		</Authors>
+		<Publisher>Pocket Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>2000</Publication_Date>
+		<Rating>3.96</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_14267</Id>
+		<ISBN>067165604X</ISBN>
+		<Book_Name>Ethan of Athos</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Lois McMaster Bujold</Name>
+			</Author>
+		</Authors>
+		<Publisher>Baen Books</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1986</Publication_Date>
+		<Rating>3.71</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_12349</Id>
+		<ISBN>074343580X</ISBN>
+		<Book_Name>March to the Sea</Book_Name>
+		<Authors>
+			<Author>
+				<Name>David Weber</Name>
+			</Author>
+		</Authors>
+		<Publisher>Baen</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>2002</Publication_Date>
+		<Pages>631</Pages>
+		<Genre>Science fiction</Genre>
+		<Rating>4.18</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_12243</Id>
+		<ISBN>074592803X</ISBN>
+		<Book_Name>A Light in the Window (The Mitford Trilogy : Book 2)</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Jan Karon</Name>
+			</Author>
+		</Authors>
+		<Publisher>Lion Publishing Corporation</Publisher>
+		<Publication_Country>United States</Publication_Country>
+		<Publication_Date>1995</Publication_Date>
+		<Rating>4.21</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_13754</Id>
+		<ISBN>067942895X</ISBN>
+		<Book_Name>The Complete Collected Poems of Maya Angelou</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Maya Angelou</Name>
+			</Author>
+		</Authors>
+		<Publisher>Random House</Publisher>
+		<Publication_Date>1994</Publication_Date>
+		<Rating>4.39</Rating>
+	</Book>
+	<Book>
+		<Id>GoodReadsBooks_5144</Id>
+		<ISBN>188098508X</ISBN>
+		<Book_Name>King Ink</Book_Name>
+		<Authors>
+			<Author>
+				<Name>Nick Cave</Name>
+			</Author>
+		</Authors>
+		<Publisher>2.13.61 Publications</Publisher>
+		<Publication_Date>1990</Publication_Date>
+		<Genre>Poetry</Genre>
+		<Rating>3.92</Rating>
+	</Book>
+</Books>

@@ -64,21 +64,26 @@ public class Books_Main {
 				new File("usecase/books/input/GoodReadsTargetSchema.xml"), 
 				new FusableBooksFactory(), 
 				"/Books/Book");
-		ds3.loadFromXML(
-				new File("usecase/books/input/FreiburgTargetSchemaOutput.xml"), 
-				new FusableBooksFactory(), 
-				"/Books/Book");
+//		ds3.loadFromXML(
+//				new File("usecase/books/input/FreiburgTargetSchemaOutput.xml"), 
+//				new FusableBooksFactory(), 
+//				"/Books/Book");
 		
 		// set dataset metadata
-		ds1.setScore(4.0);
-		ds2.setScore(3.0);
+//		ds1.setScore(4.0);
+//		ds2.setScore(3.0);
+//		ds3.setScore(1.0);
+//		ds4.setScore(2.0);
+		
+		ds1.setScore(3.0);
+		ds2.setScore(2.0);
 		ds3.setScore(1.0);
-		ds4.setScore(2.0);
+		
 		
 		ds1.setDate(DateTime.parse("2015-11-12"));
 		ds2.setDate(DateTime.parse("2015-11-12"));
 		ds3.setDate(DateTime.parse("2015-10-15"));
-		ds4.setDate(DateTime.parse("2014-09-01"));
+//		ds4.setDate(DateTime.parse("2014-09-01"));
 		// print dataset density
 		System.out.println("AuthorTargetSchemaB.xml");
 		ds1.printDataSetDensityReport();
@@ -86,8 +91,8 @@ public class Books_Main {
 		ds2.printDataSetDensityReport();
 		System.out.println("GoodReadsTargetSchema.xml");
 		ds3.printDataSetDensityReport();
-		System.out.println("FreiburgTargetSchemaOutput.xml");
-		ds4.printDataSetDensityReport();
+//		System.out.println("FreiburgTargetSchemaOutput.xml");
+//		ds4.printDataSetDensityReport();
 		
 		// load the correspondences
 		CorrespondenceSet<FusableBooks> correspondences = new CorrespondenceSet<>();
