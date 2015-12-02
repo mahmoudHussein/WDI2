@@ -36,15 +36,6 @@ import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PubCountry
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PubDateFuser;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.PublisherFuser;
 import de.uni_mannheim.informatik.wdi.datafusion.usecase.books.fusers.RatingFuser;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.FusableMovie;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.ActorsEvaluationRule;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.DateEvaluationRule;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.DirectorEvaluationRule;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.evaluation.TitleEvaluationRule;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.fusers.ActorsFuser;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.fusers.DateFuser;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.fusers.DirectorFuser;
-import de.uni_mannheim.informatik.wdi.datafusion.usecase.movies.fusers.TitleFuser;
 
 public class Books_Main {
 
@@ -53,7 +44,7 @@ public class Books_Main {
 		FusableDataSet<FusableBooks> ds1 = new FusableDataSet<>();
 		FusableDataSet<FusableBooks> ds2 = new FusableDataSet<>();
 		FusableDataSet<FusableBooks> ds3 = new FusableDataSet<>();
-//		FusableDataSet<FusableBooks> ds4 = new FusableDataSet<>();
+		FusableDataSet<FusableBooks> ds4 = new FusableDataSet<>();
 		ds1.loadFromXML(
 				new File("usecase/books/input/AuthorTargetSchemaB.xml"),
 				new FusableBooksFactory(), "/Books/Book");
@@ -64,20 +55,16 @@ public class Books_Main {
 				new File("usecase/books/input/GoodReadsTargetSchema.xml"), 
 				new FusableBooksFactory(), 
 				"/Books/Book");
-//		ds3.loadFromXML(
-//				new File("usecase/books/input/FreiburgTargetSchemaOutput.xml"), 
-//				new FusableBooksFactory(), 
-//				"/Books/Book");
+		ds4.loadFromXML(
+				new File("usecase/books/input/FreiburgTargetSchemaOutput.xml"), 
+				new FusableBooksFactory(), 
+				"/Books/Book");
 		
 		// set dataset metadata
-//		ds1.setScore(4.0);
-//		ds2.setScore(3.0);
-//		ds3.setScore(1.0);
-//		ds4.setScore(2.0);
-		
-		ds1.setScore(3.0);
-		ds2.setScore(2.0);
+		ds1.setScore(4.0);
+		ds2.setScore(3.0);
 		ds3.setScore(1.0);
+		ds4.setScore(2.0);
 		
 		
 		ds1.setDate(DateTime.parse("2015-11-12"));
@@ -91,14 +78,15 @@ public class Books_Main {
 		ds2.printDataSetDensityReport();
 		System.out.println("GoodReadsTargetSchema.xml");
 		ds3.printDataSetDensityReport();
-//		System.out.println("FreiburgTargetSchemaOutput.xml");
-//		ds4.printDataSetDensityReport();
+		System.out.println("FreiburgTargetSchemaOutput.xml");
+		ds4.printDataSetDensityReport();
 		
 		// load the correspondences
 		CorrespondenceSet<FusableBooks> correspondences = new CorrespondenceSet<>();
 		correspondences.loadCorrespondences(new File("usecase/books/correspondences/Author_2_DbpediaBooks_Correspondences.csv"), ds1, ds2);
 		correspondences.loadCorrespondences(new File("usecase/books/correspondences/Author_2_GoodReads_Correspondences.csv"), ds1, ds3);
 		correspondences.loadCorrespondences(new File("usecase/books/correspondences/GoodReads_2_DbpediaBooks_Correspondences.csv"), ds3, ds2);
+		correspondences.loadCorrespondences(new File("usecase/books/correspondences/Freiburg_2_GoodReads_Correspondences.csv"), ds4, ds3);
 		
 		// write group size distribution
 		correspondences.writeGroupSizeDistribution(new File("usecase/Books/output/group_size_distribution.csv"));
